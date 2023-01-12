@@ -14,7 +14,7 @@ export const Container = React.createContext()
 function Navbar() {
     const [toggle, setToggle] = useState(true)
     const [inputValue, setInputValue] = useState('')
-    console.log(toggle)
+    
     return (
         <Container.Provider value={{toggle,inputValue}}>
         <Fragment>
@@ -29,7 +29,7 @@ function Navbar() {
                     <NavLink to={"Tvshows"} style={({isActive}) => {return { color:isActive ? '#fff':'#EE9B00'}}}>
                     <span id={toggle ? 'Movies' : 'MoviesLight'}>Tv Shows</span>
                     </NavLink>
-                    <NavLink to={"Trending"} style={({isActive}) => {return { color:isActive ? '#fff':'#EE9B00'}}}>
+                    <NavLink to={"Trends"} style={({isActive}) => {return { color:isActive ? '#fff':'#EE9B00'}}}>
                     <span id={toggle ? 'Movies' : 'MoviesLight'}>Trending</span>
                     </NavLink>
                     <NavLink to={"Pricing"} style={({isActive}) => {return { color:isActive ? '#fff':'#EE9B00'}}}>
